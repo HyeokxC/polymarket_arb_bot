@@ -1,0 +1,54 @@
+[package]
+name = "polymarket_arb_bot"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Async Runtime
+tokio = { version = "1.35", features = ["full"] }
+
+# WebSocket
+tokio-tungstenite = "0.21"
+futures-util = "0.3"
+
+# HTTP Client
+reqwest = { version = "0.11", features = ["json", "rustls-tls"] }
+
+# JSON Parsing (High Performance)
+simd-json = "0.13"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Crypto Signing
+k256 = { version = "0.13", features = ["ecdsa"] }
+sha2 = "0.10"
+hex = "0.4"
+
+# Channel (Lock-free)
+crossbeam-channel = "0.5"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Error Handling
+anyhow = "1.0"
+thiserror = "1.0"
+
+# Config
+config = "0.14"
+dotenv = "0.15"
+
+# Utilities
+chrono = "0.4"
+rust_decimal = "1.33"
+
+# TUI Dashboard (Monitoring)
+ratatui = "0.25"
+crossterm = "0.27"
+
+[dev-dependencies]
+tokio-test = "0.4"
+mockall = "0.12"
+rust_decimal_macros = "1.33"
+
