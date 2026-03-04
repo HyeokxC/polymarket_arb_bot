@@ -1,1 +1,21 @@
 /target
+
+# Environment files (NEVER commit secrets!)
+.env
+.env.*
+!.env.example
+
+# Config with potential secrets
+config.toml
+!config.example.toml
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Claude/AI session data
+.claude/
+.omc/
